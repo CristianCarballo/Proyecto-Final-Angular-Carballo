@@ -1,0 +1,36 @@
+<div class="body">
+    <div class="login">
+        <img src="./assets/img/user.png" alt="logo">
+        <h1>Login</h1>
+        <form [formGroup]="form" (ngSubmit)="userValidation()" class="flex flex-column">
+
+            <mat-form-field appearance="fill" color="primary" class="width">
+                <mat-label>Usuario</mat-label>
+                <mat-icon matSuffix>email</mat-icon>
+                <input matInput formControlName="user">
+                <p *ngIf="form.get('user')?.touched && form.get('user')?.errors?.['required']">
+                    Este campo es obligatorio</p>
+                <p *ngIf="form.get('user')?.touched && form.get('user')?.errors?.['email']">
+                    Formato email no válido</p>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" color="primary" class="width">
+                <mat-label>Contraseña</mat-label>
+                <mat-icon matSuffix>key</mat-icon>
+                <input type="password" matInput formControlName="password">
+                <p *ngIf="form.get('password')?.touched && form.get('password')?.errors?.['required']">
+                    Este campo es obligatorio</p>
+            </mat-form-field>
+
+            <div class="row">
+                <div>
+                    <button type="submit" mat-raised-button [disabled]="form.invalid" color="primary">Ingresar</button>
+                </div>
+            </div>
+            <br>
+            <button class="width" routerLink="/sessions/register" mat-raised-button mat-button color="primary">Registrarse</button>
+            <br><br>
+            <button class="width" routerLink="/app/home" mat-raised-button mat-button color="primary">Volver</button>
+        </form>
+    </div>
+</div>

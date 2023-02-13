@@ -1,0 +1,60 @@
+<div class="container-fluid page">
+    <div class="d-flex page__box p-3 mt-2">Agregar Alumno</div>
+    <div class="page__content shadow p-3 position-relative">
+        <div class="page__content-data position-absolute text-center">
+            <!--CONTENIDO-->
+            <div class="container">
+                <form class="form" [formGroup]="form" (ngSubmit)="addStudent()">
+
+                    <div class="mb-2">
+                        <mat-form-field>
+                            <mat-label>Nombre</mat-label>
+                            <input matInput autocomplete="off" formControlName="firstName">
+                            <small
+                                *ngIf="form.get('firstName')?.errors?.['required'] && form.get('firstName')?.touched"
+                                class="text-danger">Este campo es requerido</small>
+                            <small
+                                *ngIf="form.get('firstName')?.errors?.['minLength'] && form.get('firstName')?.touched"
+                                class="text-danger">Este campo es requerido</small>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="mb-2">
+                        <mat-form-field>
+                            <mat-label>Apellido</mat-label>
+                            <input matInput autocomplete="off" formControlName="lastName">
+                            <small
+                                *ngIf="form.get('lastName')?.errors?.['required'] && form.get('lastName')?.touched"
+                                class="text-danger">Este campo es requerido</small>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="mb-2">
+                        <mat-form-field>
+                            <mat-label>DNI</mat-label>
+                            <input matInput autocomplete="off" formControlName="dni">
+                            <small
+                                *ngIf="form.get('dni')?.errors?.['required'] && form.get('dni')?.touched"
+                                class="text-danger">Este campo es requerido</small>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="mb-2">
+                        <mat-form-field>
+                            <mat-label>Nombre de usuario</mat-label>
+                            <input matInput autocomplete="off" formControlName="userName">
+                            <small
+                                *ngIf="form.get('userName')?.errors?.['required'] && form.get('userName')?.touched"
+                                class="text-danger">Este campo es requerido</small>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="mb-2">
+                        <button type="submit" [disabled]="form.invalid" mat-raised-button
+                            color="primary">Aceptar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

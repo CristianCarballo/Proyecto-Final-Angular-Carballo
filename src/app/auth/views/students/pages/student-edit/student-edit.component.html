@@ -1,0 +1,44 @@
+<div class="container-fluid page">
+    <div class="d-flex page__box p-3 mt-2">Editar Alumno</div>
+    <div class="page__content shadow p-3 position-relative">
+        <div class="page__content-data position-absolute text-center">
+
+            <div class="container">
+                <form class="form" [formGroup]="form" (ngSubmit)="editStudent()">
+
+                    <div>
+                        <mat-form-field>
+                            <mat-label>Nombre</mat-label>
+                            <input matInput autocomplete="off" formControlName="name">
+                        </mat-form-field>
+                    </div>
+
+                    <div class="mb-2">
+                        <mat-form-field>
+                            <mat-label>Apellido</mat-label>
+                            <input matInput autocomplete="off" formControlName="lastName">
+                        </mat-form-field>
+                    </div>
+
+                    <div class="mb-2">
+                        <mat-form-field>
+                            <mat-label>DNI</mat-label>
+                            <input matInput autocomplete="off" formControlName="dni">
+                        </mat-form-field>
+                    </div>
+
+                    <div class="mb-2">
+                        <mat-form-field>
+                            <mat-label>Usuario</mat-label>
+                            <input matInput autocomplete="off" formControlName="userName">
+                        </mat-form-field>
+                    </div>
+
+                    <div class="mb-2">
+                        <button type="submit" mat-raised-button color="primary">Aceptar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,61 @@
+<div class="body">
+    <div class="login">
+        <img src="./assets/img/user.png" alt="logo">
+        <h1>Registro</h1>
+        <form [formGroup]="form" (ngSubmit)="registerValidation()" class="flex flex-column">
+
+            <mat-form-field appearance="fill" class="width">
+                <mat-label>Email</mat-label>
+                <mat-icon matSuffix color="primary">email</mat-icon>
+                <input matInput formControlName="user">
+                <p *ngIf="form.get('user')?.touched && form.get('user')?.errors?.['required']">
+                    Este campo es obligatorio
+                </p>
+                <p *ngIf="form.get('user')?.touched && form.get('user')?.errors?.['email']">
+                    Formato email no válido
+                </p>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="width">
+                <mat-label>Contraseña</mat-label>
+                <mat-icon matSuffix color="primary">key</mat-icon>
+                <input matInput formControlName="password" type="password">
+                <p *ngIf="form.get('password')?.touched && form.get('password')?.errors?.['required']">
+                    Este campo es obligatorio
+                </p>
+                <p *ngIf="form.get('password')?.touched && form.get('password')?.errors?.['minlength']">
+                    La contraseña debe tener al menos 4 caracteres
+                </p>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="width">
+                <mat-label>Nombre</mat-label>
+                <mat-icon color="primary" matSuffix>person</mat-icon>
+                <input matInput formControlName="name" type="name">
+                <p *ngIf="form.get('name')?.touched && form.get('name')?.errors?.['required']">
+                    Este campo es obligatorio
+                </p>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="width">
+                <mat-label>Avatar</mat-label>
+                <mat-icon color="primary" matSuffix>image</mat-icon>
+                <input matInput formControlName="img" type="img">
+                <p *ngIf="form.get('img')?.touched && form.get('img')?.errors?.['required']">
+                    Este campo es obligatorio
+                </p>
+            </mat-form-field>
+
+            <div class="row">
+                <div class="toggle">
+                    <mat-slide-toggle formControlName="admin" class="bg-light" color="primary">¿Eres Admin?</mat-slide-toggle>
+                </div>
+            </div>
+            <br>
+            <button type="submit" mat-raised-button color="primary" [disabled]="form.invalid">Registrarse</button>
+            <br>
+        </form>
+        
+        <button class="width" routerLink="/sessions/login" mat-raised-button mat-button color="primary">Volver</button>
+    </div>
+</div>

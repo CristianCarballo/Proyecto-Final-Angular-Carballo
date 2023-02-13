@@ -1,0 +1,46 @@
+<div class="container-courses">
+    <div class="filter">
+        <div class="col-md-6">
+            <mat-form-field class="col-md-6">
+                <mat-label>Filtrar por nombre del curso</mat-label>
+                <input type="text" matInput (keyup)="filterCourses($event)" />
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="container-cards-courses">
+        <div class="row cards-courses">
+            <div *ngFor="let course of courses$ | async" class="col-md-3">
+                <mat-card class="card-container">
+                    <mat-card-header>
+                        <mat-card-title>{{ course.name }}</mat-card-title>
+                        <mat-card-subtitle>{{ course.comission }}</mat-card-subtitle>
+                    </mat-card-header>
+
+                    <img mat-card-image [src]="course.img" alt="cards" />
+
+                    <mat-card-content>
+                        <p>Dictado por {{ course.teacher }}</p>
+                        <p>Inicia el {{ course.startDate | date: "dd/MM/YYYY" }}</p>
+                        <p>Finaliza el {{ course.endDate | date: "dd/MM/YYYY" }}</p>
+                    </mat-card-content>
+
+                    <mat-card-actions align="end">
+                        <div>
+                            <button mat-icon-button color="warn" (click)="editCourse(course)"
+                                *ngIf="session.userActive?.admin">
+                                <mat-icon>edit</mat-icon>
+                            </button>
+                            <button mat-icon-button color="primary" (click)="deleteCourse(course)"
+                                *ngIf="session.userActive?.admin">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                            <button mat-icon-button color="accent" [routerLink]="'/courses/'+ course.id">
+                                <mat-icon>visibility</mat-icon>
+                            </button>
+                        </div>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

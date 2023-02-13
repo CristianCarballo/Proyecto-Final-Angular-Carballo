@@ -1,0 +1,31 @@
+.body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-image: url("https://cdn.pixabay.com/photo/2019/10/29/20/58/note-book-4588155_960_720.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1 {
+  color: #ffffff;
+}
+
+.login {
+  background-color: #0d2a618e;
+  width: 100%;
+  max-width: 350px;
+  padding: 25px;
+  margin: auto;
+  text-align: center;
+}
+
+.width {
+  width: 100%;
+}
