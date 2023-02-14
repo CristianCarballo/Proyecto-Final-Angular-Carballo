@@ -14,7 +14,7 @@
   
   .mat-divider {
     border-top-width: 2px;
-    border-color: white;
+    border-color: #0d2a618e;
   }
 
   
@@ -56,3 +56,7 @@
     font-weight: 100;
     letter-spacing: 1px;
   }
+
+    .mat-nav-list {
+    background: #ffffff
+}

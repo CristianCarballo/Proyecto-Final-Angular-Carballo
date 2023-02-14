@@ -1,7 +1,7 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Observable, throwError } from 'rxjs';
-import { environmentsPROD } from 'src/environments/environments.prod';
+import { environments } from 'src/environments/environments';
 import { Student } from '../model/student';
 
 @Injectable({
@@ -10,14 +10,14 @@ import { Student } from '../model/student';
 
 export class StudentService {
 
-  private apiURL = environmentsPROD.apiURL;
+  private apiURL = environments.apiURL;
 
   constructor(private http: HttpClient) {
 
   }
 
   getStudent(): Observable<Student[]>{
-    return this.http.get<Student[]>(`${this.apiURL}/Student`).pipe(catchError(this.errorManagement));
+    return this.http.get<Student[]>(`${this.apiURL}/students`).pipe(catchError(this.errorManagement));
   }
 
   addStudent(student: Student) : Observable<Student> {
@@ -25,11 +25,11 @@ export class StudentService {
   }
 
   deleteStudent(student: Student) : Observable<Student> {
-    return this.http.delete<Student>(`${this.apiURL}/students/${student.id}`).pipe(catchError(this.errorManagement));
+    return this.http.delete<Student>(`${this.apiURL}/students${student.id}`).pipe(catchError(this.errorManagement));
   }
 
   editStudent(student: Student) : Observable<Student> {
-    return this.http.put<Student>(`${this.apiURL}/students/${student.id}`, student).pipe(catchError(this.errorManagement));
+    return this.http.put<Student>(`${this.apiURL}/students${student.id}`, student).pipe(catchError(this.errorManagement));
   }
 
   private errorManagement(error: HttpErrorResponse) {

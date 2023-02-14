@@ -28,7 +28,7 @@ export class StudentFormComponent implements OnInit, OnDestroy {
     this.studentSubscription = this.studentService.getStudent().subscribe((student) => this.students = student)
 
     this.form = new FormGroup({
-      name: new FormControl('', [Validators.required]),
+      firstName: new FormControl('', [Validators.required]),
       lastName: new FormControl('', [Validators.required]),
       dni: new FormControl('', [Validators.required]),
       userName: new FormControl('', [Validators.required]),
@@ -41,17 +41,17 @@ export class StudentFormComponent implements OnInit, OnDestroy {
 
     let student : Student = {
       id: idStudent + 1,
-      firstName: this.form.value.nombre,
-      lastName: this.form.value.apellido,
+      firstName: this.form.value.firstName,
+      lastName: this.form.value.lastName,
       dni: this.form.value.dni,
-      userName: this.form.value.nameUsuario
+      userName: this.form.value.userName
     }
 
     this.studentService.addStudent(student).subscribe(()=>this.router.navigate(['/students']));
     Swal.fire({
       position: 'center',
       icon: 'success',
-      title: 'Se agrego un nuevo alumno',
+      title: 'Se agregó un nuevo alumno',
       showConfirmButton: false,
       timer: 1500,
     });

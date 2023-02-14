@@ -10,15 +10,15 @@ const routes: Routes = [
     children:[
       {
         path:'login',
-        component:LoginComponent
+        component: LoginComponent
       },
       {
         path:'register',
-        component:RegisterComponent,
+        component: RegisterComponent,
       },
       {
         path:'404',
-        component:NotFoundComponent
+        component: NotFoundComponent
       }
     ]
   }

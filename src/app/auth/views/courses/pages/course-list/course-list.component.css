@@ -6,3 +6,8 @@
 .card-container{
     margin-bottom: 30px;
 }
+
+.container-courses {
+    min-height: 100vh;
+    background: #0d2a618e;
+}

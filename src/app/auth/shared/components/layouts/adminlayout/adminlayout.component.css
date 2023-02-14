@@ -6,7 +6,7 @@
 
 mat-drawer{
     width: 260px;
-    background-color: #0f172a;
+    background-color: #0d2a618e;
 }
 
 mat-drawer-container{
@@ -14,13 +14,13 @@ mat-drawer-container{
 }
 
 .page {
-    color: white;
+    color: #ffffff;
     padding: 0 1rem;
     background: #f1f5f9;
 }
 .page__box {
     min-height: 120px;
-    background: #1e293b;
+    background: #ffffff;
     margin: 0 -1rem;
     font-size: 36px;
 }
@@ -28,8 +28,8 @@ mat-drawer-container{
     min-height: calc(100vh - 178px);
     border-radius: 10px;
     margin-top: -2rem;
-    background: white;
-    color: black;
+    background: #ffffff;
+    color: #000000;
     font-size: 2rem;
 }
 .page__content-data {

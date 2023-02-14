@@ -21,8 +21,8 @@ export class CourseDetailComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit(): void {
-    this.activatedRoute.paramMap.subscribe((parametros) => {
-      let id = parseInt(parametros.get('id') || '0');
+    this.activatedRoute.paramMap.subscribe((params) => {
+      let id = parseInt(params.get('id') || '0');
       this.course$ = this.coursesService.getCourse(id)
     });
     this.courseSubscription = this.course$.subscribe(

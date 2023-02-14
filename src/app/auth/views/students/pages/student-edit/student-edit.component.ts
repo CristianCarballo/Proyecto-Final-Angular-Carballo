@@ -27,7 +27,7 @@ export class StudentEditComponent implements OnInit {
     this.activatedRouted.paramMap.subscribe((data) => {
       this.id = parseInt(data.get('id') || '')
       this.form = new FormGroup({
-        name: new FormControl(data.get('name')),
+        firstName: new FormControl(data.get('firstName')),
         lastName: new FormControl(data.get('lastName')),
         dni: new FormControl(data.get('dni')),
         userName: new FormControl(data.get('userName')),
@@ -38,7 +38,7 @@ export class StudentEditComponent implements OnInit {
   editStudent() {
     let student: Student = {
       id: this.id,
-      firstName: this.form.value.name,
+      firstName: this.form.value.firstName,
       lastName: this.form.value.lastName,
       dni: this.form.value.dni,
       userName: this.form.value.userName,

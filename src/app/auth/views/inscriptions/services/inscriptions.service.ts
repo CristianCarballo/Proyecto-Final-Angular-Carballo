@@ -29,7 +29,7 @@ export class InscriptionsService {
 
   private errorManagement(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
-      console.warn('error del lsdo del cliente', error.error.message);
+      console.warn('error del lado del cliente', error.error.message);
     } else {
       console.warn('error del lado del servidor', error.error.message);
     }

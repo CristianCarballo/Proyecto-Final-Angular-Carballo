@@ -22,7 +22,7 @@ export class AuthGuard implements CanActivate {
         if (session.userActive) {
           return true;
         } else {
-          this.router.navigate(['/sessions/register'])
+          this.router.navigate(['/sessions/login'])
           return false
         }
       })

@@ -22,7 +22,7 @@
                             <mat-label>Select Alumno</mat-label>
                             <mat-select formControlName="student">
                                 <mat-option *ngFor="let student of students"
-                                    [value]="{firstName: student.firstName, lastName:student.lastName}">
+                                    [value]="{firstName: student.firstName, lastName: student.lastName}">
                                     {{student.id + "-" + student.firstName + ' ' + student.lastName}}
                                 </mat-option>
                             </mat-select>
@@ -47,7 +47,7 @@
                             <mat-datepicker #date></mat-datepicker>
                         </mat-form-field>
                     </div>
-                    <button mat-raised-button color="primary" [disabled]="form.invalid">Submit</button>
+                    <button mat-raised-button color="primary" [disabled]="form.valid" type="submit">Aceptar</button>
                 </form>
             </div>
         </div>

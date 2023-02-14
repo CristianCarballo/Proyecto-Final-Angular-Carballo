@@ -1,28 +1,34 @@
-<mat-nav-list>
+<mat-nav-list class="mat-nav-list">
+
     <div class="logo py-4">
-        <img src="https://res.cloudinary.com/hdsqazxtw/image/upload/f_auto/v1579032128/coder-logo-white_t41xzb.png"
-            alt="">
+        <img src="https://www.academiadeinversion.com/wp-content/uploads/2015/10/Logo-Academia-de-Inversion-opcion-1.png" alt="">
     </div>
+
     <mat-divider></mat-divider>
-    <h2 matSubheader class="mt-2">Proyecto Final</h2>
 
     <a mat-list-item routerLink="/students" routerLinkActive="list-item-active">
-        <mat-icon>person</mat-icon>
-        Alumnos</a>
+        <mat-icon color="primary">person</mat-icon>
+        Alumnos
+    </a>
     <a mat-list-item routerLink="/students/form" routerLinkActive="list-item-active" *ngIf="session.userActive?.admin">
-        <mat-icon>person_add</mat-icon>
-        Agregar alumno</a>
+        <mat-icon color="primary">person_add</mat-icon>
+        Agregar alumno
+    </a>
     <a mat-list-item routerLink="/courses" routerLinkActive="list-item-active">
-        <mat-icon>collections_bookmark</mat-icon>
-        Cursos</a>
+        <mat-icon color="primary">collections_bookmark</mat-icon>
+        Cursos
+    </a>
     <a mat-list-item routerLink="/courses/form" routerLinkActive="list-item-active" *ngIf="session.userActive?.admin">
-        <mat-icon>library_add</mat-icon>
-        Agregar curso</a>
+        <mat-icon color="primary">library_add</mat-icon>
+        Agregar curso
+    </a>
     <a mat-list-item routerLink="/inscriptions" routerLinkActive="list-item-active">
-        <mat-icon>group</mat-icon>
-        Inscripción</a>
+        <mat-icon color="primary">group</mat-icon>
+        Inscripción
+    </a>
     <a mat-list-item routerLink="/inscriptions/form" routerLinkActive="list-item-active"
         *ngIf="session.userActive?.admin">
-        <mat-icon>group_add</mat-icon>
-        Agregar inscripción</a>
+        <mat-icon color="primary">group_add</mat-icon>
+        Agregar inscripción
+    </a>
 </mat-nav-list>

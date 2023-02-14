@@ -8,6 +8,7 @@ import { SessionService } from 'src/app/auth/views/sessions/services/session.ser
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.css']
 })
+
 export class SidenavComponent implements OnInit, OnDestroy{
   
   session$!: Observable<Session>;
