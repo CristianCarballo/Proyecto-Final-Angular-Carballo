@@ -6,7 +6,7 @@ interface inscriptionStudent{
 
 interface inscriptionCourse{
     id: number,
-    name: string,
+    courseName: string,
 }
 
 export interface Inscription {

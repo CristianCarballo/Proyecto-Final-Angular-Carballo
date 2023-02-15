@@ -8,7 +8,7 @@
 
     <a mat-list-item routerLink="/students" routerLinkActive="list-item-active">
         <mat-icon color="primary">person</mat-icon>
-        Alumnos
+        Lista de alumnos
     </a>
     <a mat-list-item routerLink="/students/form" routerLinkActive="list-item-active" *ngIf="session.userActive?.admin">
         <mat-icon color="primary">person_add</mat-icon>
@@ -16,7 +16,7 @@
     </a>
     <a mat-list-item routerLink="/courses" routerLinkActive="list-item-active">
         <mat-icon color="primary">collections_bookmark</mat-icon>
-        Cursos
+        Lista de cursos
     </a>
     <a mat-list-item routerLink="/courses/form" routerLinkActive="list-item-active" *ngIf="session.userActive?.admin">
         <mat-icon color="primary">library_add</mat-icon>
@@ -24,7 +24,7 @@
     </a>
     <a mat-list-item routerLink="/inscriptions" routerLinkActive="list-item-active">
         <mat-icon color="primary">group</mat-icon>
-        Inscripción
+        Lista de inscripciones
     </a>
     <a mat-list-item routerLink="/inscriptions/form" routerLinkActive="list-item-active"
         *ngIf="session.userActive?.admin">

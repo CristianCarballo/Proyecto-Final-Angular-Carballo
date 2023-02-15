@@ -61,7 +61,7 @@ export class InscriptionFormComponent implements OnInit, OnDestroy {
       }),
         date: new FormControl('', [Validators.required]),
         course: new FormGroup({
-        nameCourse: new FormControl('', [Validators.required]),
+        name: new FormControl('', [Validators.required]),
       }),
     });
   }
