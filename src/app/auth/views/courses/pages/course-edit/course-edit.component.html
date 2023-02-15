@@ -9,14 +9,14 @@
 
                 <div>
                     <mat-form-field appearance="fill">
-                        <mat-label>Nombre Curso</mat-label>
+                        <mat-label>Nombre del curso</mat-label>
                         <input matInput formControlName="name">
                     </mat-form-field>
                 </div>
 
                 <div class="mb-2">
                     <mat-form-field appearance="fill" class="fill">
-                        <mat-label>Comision</mat-label>
+                        <mat-label>Comisión</mat-label>
                         <input matInput formControlName="comission">
                     </mat-form-field>
                 </div>
@@ -30,7 +30,7 @@
 
                 <div class="mb-2">
                     <mat-form-field appearance="fill" class="fill">
-                        <mat-label>Fecha Inicio</mat-label>
+                        <mat-label>Fecha de inicio</mat-label>
                         <input matInput [matDatepicker]="startDate" formControlName="startDate">
                         <mat-hint>MM/DD/YYYY</mat-hint>
                         <mat-datepicker-toggle matSuffix [for]="startDate"></mat-datepicker-toggle>
@@ -40,7 +40,7 @@
 
                 <div class="mb-2">
                     <mat-form-field appearance="fill" class="fill">
-                        <mat-label>Fecha Fin</mat-label>
+                        <mat-label>Fecha de finalización</mat-label>
                         <input matInput [matDatepicker]="endDate" formControlName="endDate">
                         <mat-hint>MM/DD/YYYY</mat-hint>
                         <mat-datepicker-toggle matSuffix [for]="endDate"></mat-datepicker-toggle>
@@ -50,13 +50,13 @@
 
                 <div class="mb-2">
                     <mat-form-field appearance="fill" class="fill">
-                        <mat-label>image</mat-label>
-                        <input matInput formControlName="img">
+                        <mat-label>Imagen</mat-label>
+                        <input matInput formControlName="img" placeholder="Pegar link de la imagen">
                     </mat-form-field>
                 </div>
 
                 <div class="mb-2">
-                    <button type="submit" mat-raised-button color="primary">Guardar Cambios </button>
+                    <button type="submit" mat-raised-button color="primary">Guardar Cambios</button>
                 </div>
 
             </form>

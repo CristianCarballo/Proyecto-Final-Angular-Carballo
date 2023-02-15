@@ -25,11 +25,11 @@ export class StudentService {
   }
 
   deleteStudent(student: Student) : Observable<Student> {
-    return this.http.delete<Student>(`${this.apiURL}/students${student.id}`).pipe(catchError(this.errorManagement));
+    return this.http.delete<Student>(`${this.apiURL}/students/${student.id}`).pipe(catchError(this.errorManagement));
   }
 
   editStudent(student: Student) : Observable<Student> {
-    return this.http.put<Student>(`${this.apiURL}/students${student.id}`, student).pipe(catchError(this.errorManagement));
+    return this.http.put<Student>(`${this.apiURL}/students/${student.id}`, student).pipe(catchError(this.errorManagement));
   }
 
   private errorManagement(error: HttpErrorResponse) {

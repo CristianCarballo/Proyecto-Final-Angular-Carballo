@@ -26,7 +26,7 @@ export class CourseFormComponent implements OnInit {
       teacher: new FormControl('', [Validators.required]),
       startDate: new FormControl('', [Validators.required]),
       endDate: new FormControl('', [Validators.required]),
-      img: new FormControl(),
+      img: new FormControl(''),
     });
   }
 

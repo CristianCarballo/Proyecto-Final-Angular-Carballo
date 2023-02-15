@@ -15,6 +15,7 @@ import { UserService } from '../../services/user.service';
 export class RegisterComponent implements OnInit, OnDestroy {
 
   form: FormGroup;
+  srcResult!: string;
 
   users!: User[];
   users$!: Observable<User[]>;
@@ -53,7 +54,7 @@ export class RegisterComponent implements OnInit, OnDestroy {
       password: this.form.value.password,
       admin: this.form.value.admin,
       name: this.form.value.name,
-      img:this.form.value.img
+      img: this.form.value.img
     };
 
     this.userService.addUser(user).subscribe(() => {
@@ -83,6 +84,20 @@ export class RegisterComponent implements OnInit, OnDestroy {
         showConfirmButton: false,
         timer: 1500,
       });
+    }
+  }
+
+  onFileSelected() {
+    const inputNode: any = document.querySelector('#file');
+  
+    if (typeof (FileReader) !== 'undefined') {
+      const reader = new FileReader();
+  
+      reader.onload = (e: any) => {
+        this.srcResult = e.target.result;
+      };
+  
+      reader.readAsArrayBuffer(inputNode.files[0]);
     }
   }
 }

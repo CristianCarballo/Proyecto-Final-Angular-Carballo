@@ -1,7 +1,7 @@
 <div class="container-fluid page">
     <div class="d-flex page__box p-3 mt-2">Agregar Curso</div>
-    <div class="page__content shadow p-3 position-relative">
-        <div class="page__content-data position-absolute text-center">
+    
+    <div class="page__content-data position-absolute text-center">
             <!--CONTENIDO-->
             <div class="container">
 
@@ -9,7 +9,7 @@
 
                     <div class="mb-2">
                         <mat-form-field>
-                            <mat-label>Nombre Curso</mat-label>
+                            <mat-label>Nombre del curso</mat-label>
                             <input matInput formControlName="name">
                             <small *ngIf="form.get('name')?.errors?.['required'] && form.get('name')?.touched"
                                 class="text-danger">Este campo es requerido</small>
@@ -18,7 +18,7 @@
 
                     <div class="mb-2">
                         <mat-form-field>
-                            <mat-label>Descripcion del Curso</mat-label>
+                            <mat-label>Descripción del curso</mat-label>
                             <input matInput formControlName="info">
                             <small *ngIf="form.get('info')?.errors?.['required'] && form.get('info')?.touched"
                                 class="text-danger">Este campo es requerido</small>
@@ -44,7 +44,7 @@
 
                     <div class="mb-2">
                         <mat-form-field>
-                            <mat-label>Fecha Inicio</mat-label>
+                            <mat-label>Fecha de inicio</mat-label>
                             <input matInput [matDatepicker]="startDate" formControlName="startDate">
                             <mat-hint>MM/DD/YYYY</mat-hint>
                             <mat-datepicker-toggle matSuffix [for]="startDate"></mat-datepicker-toggle>
@@ -53,7 +53,7 @@
                     </div>
                     <div class="mb-2">
                         <mat-form-field>
-                            <mat-label>Fecha Fin</mat-label>
+                            <mat-label>Fecha de finalización</mat-label>
                             <input matInput [matDatepicker]="endDate" formControlName="endDate">
                             <mat-hint>MM/DD/YYYY</mat-hint>
                             <mat-datepicker-toggle matSuffix [for]="endDate"></mat-datepicker-toggle>
@@ -64,8 +64,8 @@
 
                     <div class="mb-2">
                         <mat-form-field>
-                            <mat-label>image</mat-label>
-                            <input matInput formControlName="img">
+                            <mat-label>Imagen</mat-label>
+                            <input matInput formControlName="img" placeholder="Pegar link de la imagen">
                         </mat-form-field>
                     </div>
 
@@ -80,5 +80,5 @@
                 </form>
             </div>
         </div>
-    </div>
+
 </div>

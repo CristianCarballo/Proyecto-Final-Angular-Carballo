@@ -29,7 +29,7 @@
             </mat-form-field>
 
             <mat-form-field appearance="fill" class="width">
-                <mat-label>Nombre</mat-label>
+                <mat-label>Nombre de usuario</mat-label>
                 <mat-icon color="primary" matSuffix>person</mat-icon>
                 <input matInput formControlName="name" type="name">
                 <p *ngIf="form.get('name')?.touched && form.get('name')?.errors?.['required']">
@@ -39,11 +39,8 @@
 
             <mat-form-field appearance="fill" class="width">
                 <mat-label>Avatar</mat-label>
-                <mat-icon color="primary" matSuffix>image</mat-icon>
-                <input matInput formControlName="img" type="img">
-                <p *ngIf="form.get('img')?.touched && form.get('img')?.errors?.['required']">
-                    Este campo es obligatorio
-                </p>
+                <mat-icon color="primary" matSuffix>Imagen (opcional)</mat-icon>
+                <input matInput formControlName="img" type="img" placeholder="Pegar link de la imagen">
             </mat-form-field>
 
             <div class="row">

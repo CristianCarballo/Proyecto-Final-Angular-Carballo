@@ -28,10 +28,10 @@ export class CourseEditComponent implements OnInit {
       this.form = new FormGroup({
         name: new FormControl(parameters.get('name')),
         info: new FormControl(parameters.get('info')),
-        comision: new FormControl(parameters.get('comission')),
-        profesor: new FormControl(parameters.get('teacher')),
-        inicio: new FormControl(parameters.get('startDate')),
-        fin: new FormControl(parameters.get('endDate')),
+        comission: new FormControl(parameters.get('comission')),
+        teacher: new FormControl(parameters.get('teacher')),
+        startDate: new FormControl(parameters.get('startDate')),
+        endDate: new FormControl(parameters.get('endDate')),
         img: new FormControl(parameters.get('img')),
       });
     });

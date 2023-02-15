@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { environments } from 'src/environments/environments';
+import { environments } from 'src/environments/envirenments-course';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { catchError, Observable, throwError } from 'rxjs';
 import { Inscription } from '../models/inscription';
